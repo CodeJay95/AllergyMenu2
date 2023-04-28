@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
+/* Reset some default styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  line-height: 1.5;
+  background-color: #1b1d42;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.restaurant-name {
+  font-family: 'Comorant Garamond', serif;
+  font-size: 48px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.restaurant-description {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#allergen-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#category-buttons {
+  border-bottom: none;
+}
+
+#category-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px solid #d2d2d2;
+  margin-bottom: 10px;
+}
+
+.category-tab {
+  height: 60px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #737373;
+  font-weight: 400;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-transition: color 0.2s ease, background-color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.category-tab:hover {
+  background-color: #b92222;
+  color: #ffffff;
+}
+
+.category-tab.active:hover {
+  background-color: #e2c928;
+}
+
+.category-tab:not(:last-child) {
+  margin-right: 20px;
+}
+
+.category-tab.active {
+  background-color: #d2d2d2;
+  color: #000000;
+}
+
+.allergen-button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 20px;
+}
+
+.allergen-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.allergen-button.selected {
+  background-color: #f0c62d;
+  color: #1b1d42;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dish {
+  flex: 0 0 calc(33.333% - 20px);
+  background-color: #0a0a0a;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .dish {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .dish {
+    flex: 0 0 100%;
+  }
+}
+.restaurant-logo {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#reset-button {
+  background-color: white;
+  color: black;
+}
+
+#reset-button:hover {
+  background-color: red;
+  color: white;
+}
+
+#category-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.category-tab {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.category-tab:hover {
+  background-color: #0069d9;
+}
+#category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0px 20px 0px;
+}
+
+.category-button {
+  background-color: #1b1d42;
+  border: none;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: #ffffff;
+}
+
+.category-button:hover {
+  background-color: #f0c62d;
+  color: #000000;
+  outline: none;
+}

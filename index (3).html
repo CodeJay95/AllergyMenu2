@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allergen Filter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="Screenshot 2023-04-19 at 03.10.29.png" alt="Nori" class="restaurant-logo">
+    <p class="restaurant-description">A high-end Japanese Sushi restaurant serving contemporary French dishes.</p>
+    <div id="allergen-buttons"></div>
+    <div id="category-tabs-container"></div>
+    <button id="reset-button" class="reset-button">Reset</button>
+    <div id="category-buttons"></div>
+    <div id="menu-container"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+<script>
+  const categoryButtons = document.querySelectorAll('.category-button');
+  
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      // Remove active class from all buttons
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to the clicked button
+      this.classList.add('active');
+    });
+  });
+</script>
